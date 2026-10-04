@@ -1,0 +1,17 @@
+{
+  "year": 2026,
+  "min_hourly_wage": 10320,
+  "probation_rate": 0.9,
+  "weekly_holiday_min_hours": 15,
+  "overtime_premium": 0.5,
+  "night_premium": 0.5,
+  "holiday_premium_within_8h": 0.5,
+  "holiday_premium_over_8h": 1.0,
+  "housing_deduction_caps": {
+    "_note": "외국인근로자 숙식비 지침의 월 통상임금 대비 공제 상한 비율. 제출 전 고용노동부 원문으로 반드시 확인",
+    "house_with_meals": 0.20,
+    "temporary_with_meals": 0.13,
+    "house_only": 0.15,
+    "temporary_only": 0.08
+  }
+}

@@ -1,0 +1,6 @@
+streamlit
+google-genai
+reportlab
+pillow
+pandas
+pytest
