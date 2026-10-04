@@ -14,6 +14,17 @@ from complaint_pdf import build_complaint_pdf
 from demo import demo_generate_fn, demo_extract_fn, SAMPLE_EXTRACTIONS
 
 st.set_page_config(page_title="임금 지킴이 Wage Guardian", page_icon="🛡️", layout="wide")
+
+# 브라우저 자동 번역이 한국어 화면을 엉뚱하게 바꾸지 않도록 페이지 언어를 한국어로 지정
+import streamlit.components.v1 as components
+components.html("""<script>
+const d = window.parent.document;
+d.documentElement.lang = 'ko';
+d.documentElement.setAttribute('translate', 'no');
+if (!d.querySelector('meta[name=google]')) {
+  const m = d.createElement('meta'); m.name = 'google'; m.content = 'notranslate'; d.head.appendChild(m);
+}
+</script>""", height=0)
 SAMPLES_DIR = Path(__file__).parent / "samples"
 SAMPLE_LABELS = {"T10": "복합 위반 (시연용)", "T03": "연장수당 미지급", "T07": "숙식비 과다 공제",
                  "T01": "정상 지급", "G01_mismatch": "합계 불일치 (검산 테스트)"}
